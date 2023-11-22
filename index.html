@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recharge card generator</title>
+</head>
+
+<body>
+    <div>
+        <h1>RECHARGE CARD GENERATOR</h1>
+    </div>
+
+    <div class="container">
+        <div class="box1">
+            <div>
+                <p class="p1">Choose Network</p>
+                <select id="netOperator" class=" dropEdit form-select form-select-sm" aria-label="Default select example">
+                    <option selected value="">Select Network</option>
+                    <option value="MTN">MTN</option>
+                    <option value="GLO">GLO</option>
+                    <option value="AIRTEL">AIRTEL</option>
+                    <option value="ETISALAT">ETISALAT</option>
+                </select>
+
+                <p class="p1">Choose Amount</p>
+                <select id="amounts" class=" dropEdit form-select form-select-sm" aria-label="Default select example">
+                    <option selected value="">Select Amount</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="500">500</option>
+                    <option value="750">750</option>
+                    <option value="1000">1000</option>
+                </select>
+
+                <label for="generatePin" class="form-label p1">Generate Pin</label>
+                <input type="text" class="form-control dropEdit" id="generatePin" placeholder="Pin generated">
+            </div>
+            <div class="btns">
+                <button type="button" class="btn btn-dark" onclick="generated()">GENERATE PIN</button>
+                <button type="button" class="btn btn-light savebtn" onclick="saved()">SAVE PIN</button>
+            </div>
+
+
+        </div>
+        <div class="box2">
+            <div>
+                <label for="EnterPin" class="form-label p1">Enter Pin</label>
+                <input type="text" class="form-control dropEdit" id="EnterPin" placeholder="Enter Pin here">
+
+            </div>
+            <div class="loadbtn">
+                <button type="button" class="btn btn-primary" onclick="loaded()" >LOAD CARD</button>
+            </div>
+        </div>
+    </div>
+    <div id="historySEC">
+        <h2>HISTORY</h2>
+        <table>
+            <tr>
+                <th>S/N</th>
+                <th>Network OPERATOR</th>
+                <th>AMOUNT</th>
+                <th>DATE PRINTED</th>
+                <th>PIN</th>
+                <th>PRINT REFERENCE</th>
+                <th>STATUS</th>
+                <th>DELETE</th>
+            </tr>
+            <tbody id = 'tableBody'>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
